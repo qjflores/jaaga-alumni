@@ -16,7 +16,9 @@ export class ViewProfile extends Component {
 
   render() {
     return(
+      <div className="ViewProfile">
       ViewProfile
+      </div>
       )
   }
 }

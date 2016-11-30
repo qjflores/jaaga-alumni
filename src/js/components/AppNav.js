@@ -30,6 +30,7 @@ export class AppNav extends Component {
 	}
 
 	clickBrowseAlumni() {
+		console.log("clickBrowseAlumni");
 		this.setState({
 			isEditProfileVisible: false,
 			isBrowseAlumniVisible: true,
@@ -59,11 +60,15 @@ export class AppNav extends Component {
   render() {
     return (
       <div className="AppNav">
-      	<AlumniNavigator user={this.props.user} logout={this.props.logout}/>
-      	{this.state.isEditProfileVisible ? <EditProfile user={this.props.user} clickEditProfile={this.clickEditProfile}/> : null}
-      	{this.state.isBrowseAlumniVisible ? <BrowseAlumni user={this.props.user} clickBrowseAlumni={this.clickBrowseAlumni}/> : null}
+      	<AlumniNavigator user={this.props.user} logout={this.props.logout}
+      	clickBrowseAlumni={this.clickBrowseAlumni}
+      	clickEditProfile={this.clickEditProfile}
+      	clickProjects={this.clickProjects}
+      	/>
+      	{this.state.isEditProfileVisible ? <EditProfile user={this.props.user} /> : null}
+      	{this.state.isBrowseAlumniVisible ? <BrowseAlumni user={this.props.user}/> : null}
       	{this.state.isViewProfileVisible ? <ViewProfile user={this.props.user}/> : null}
-      	{this.state.isProjectsVisible ? <Projects user={this.props.user} clickProjects={this.clickProjects}/> : null}
+      	{this.state.isProjectsVisible ? <Projects user={this.props.user} /> : null}
       </div>
     );
   }

@@ -16,7 +16,9 @@ export class EditProfile extends Component {
 
 	render() {
 		return(
+			<div className="EditProfile">
 			EditProfile
+			</div>
 			)
 	}
 }
