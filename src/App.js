@@ -32,7 +32,6 @@ class App extends Component {
       } else {
         this.setState({isAuthenticated:false,user:undefined});
       }
-
     })
   }
 
@@ -85,7 +84,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        {this.state.isAuthenticated ? <AppNav user={this.state.user}/> : <Account login={this.login} signup={this.signup} user={this.state.user}/>}
+        {this.state.isAuthenticated ? <AppNav user={this.state.user} logout={this.logout}/> : <Account login={this.login} signup={this.signup} user={this.state.user}/>}
       </div>
     );
   }
