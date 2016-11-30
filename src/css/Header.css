@@ -1,0 +1,39 @@
+.Header {
+    display: flex;
+    margin: auto;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    margin: auto;
+    height: 3rem;
+    margin-top: 2rem;
+}
+
+.title {
+    margin: auto;
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+
+.homeurl {
+    margin: auto;
+    margin-top: 3rem;
+    padding-top: 1rem;
+}
+
+.displayname {
+    margin: auto;
+    margin-top: 3rem;
+    padding-top: 1rem;   
+}
+
+.profilepic {
+    width: 5em;
+    height: 6rem;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    margin: auto;
+    margin-top: 3rem;
+}
