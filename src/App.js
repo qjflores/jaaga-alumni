@@ -53,8 +53,9 @@ class App extends Component {
     var userid = "";
     auth.createUserWithEmailAndPassword(email, pass).then(function(firebaseUser) {
       userid = firebaseUser.uid;
-      var userdata = {[userid]:{"email":email}};
-      firebase.database().ref("users").set(userdata);
+      console.log(userid)
+      var userdata = {"email":email};
+      firebase.database().ref("users/" + userid).set(userdata);
     }).catch(function(error) {
       console.log(error);
       this.handleAuthError(error.message);
